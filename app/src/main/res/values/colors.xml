@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryRed">#B00000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="pink">#FF0099</color>
+    <color name="ash">#E8E8E8</color>
+    <color name="red">#DD0000</color>
+    <color name="lightRed">#FF0000</color>
+    <color name="reder">#990000</color>
+    <color name="ashBlack">#B8B8B8</color>
+    <color name="asher">#C0C0C0</color>
+    <color name="darkAsh">#E0E0E0</color>
+    <color name="blash">#585858</color>
+    <color name="blackFade">#99000000</color>
+    <color name="whiteFade">#99FFFFFF</color>
+    <color name="redFade">#33B00000</color>
+    <color name="whtFade">#33FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="green">#009900</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="yellowLight">#FFFF99</color>
+    <color name="selected_filter">#221f20</color>
+    <color name="normal_filter">#8a8889</color>
+    <color name="lightAsh">#F9F9F9</color>
+    <color name="purple_700">#000000</color>
+    <color name="purple_200">#000000</color>
+    <color name="teal_200">#000000</color>
+    <color name="lightGreen">#00FF00</color>
+    <color name="linkColor">#0099FF</color>
+    <color name="highLightWhite">#0099FF</color>
+    <color name="highLightBlack">#0099FF</color>
+</resources>

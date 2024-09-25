@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:background="@drawable/border_fine"
+        android:focusable="true">
+
+        <com.pixtanta.android.Views.CornerImageView
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/image"
+            android:tag="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:id="@+id/videoPlay"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:background="@drawable/ic_play"
+        android:focusable="true">
+
+    </LinearLayout>
+</RelativeLayout>

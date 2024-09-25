@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/border_rad"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                app:cardCornerRadius="27dp"
+                android:background="?attr/ash"
+                app:cardElevation="0dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:id="@+id/posterPht"
+                    android:maxWidth="55dp"
+                    android:maxHeight="55dp"
+                    android:minHeight="55dp"
+                    android:minWidth="55dp"/>
+
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:orientation="vertical"
+                tools:ignore="RtlSymmetry">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/posterName"
+                    android:singleLine="true"
+                    android:lines="1"
+					android:textColor="?attr/black"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:drawablePadding="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/posterUName"
+                    android:textColor="?attr/ashBlack"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/postText"
+                android:textColor="?attr/black"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/files"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:textStyle="bold"
+                android:textColor="?attr/twitch" />
+
+            <TextView
+                android:id="@+id/postDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|center_vertical"
+                android:textColor="?attr/ashBlack" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/clickView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:padding="10dp"
+            android:background="@drawable/border_top_ash_rad"
+            android:textColor="?attr/black" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:background="?attr/white"
+    tools:context=".SetupPageActivity"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/kill"
+        android:duplicateParentState="true"
+        android:background="?attr/colorPrimaryRed">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:duplicateParentState="true"
+            android:textStyle="bold"
+            android:text="@string/setup_page_details"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:duplicateParentState="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_below="@id/kill"
+        android:id="@+id/nomo">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pageName"
+            android:textSize="15sp"
+			android:background="@drawable/border_bottom"
+			android:textColorHint="?attr/blash"
+            android:singleLine="true"
+            android:lines="1"
+            android:hint="@string/page_name"
+            android:padding="5dp"
+            android:textColor="?attr/icon_pri_red" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:duplicateParentState="true"
+        android:layout_below="@id/nomo"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/catLayout"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:focusable="true">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:duplicateParentState="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="end">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:backgroundTint="@color/colorPrimaryRed"
+			android:textStyle="bold"
+            android:layout_marginEnd="30dp"
+            android:text="@string/create_page"
+            android:id="@+id/createPage"
+            android:duplicateParentState="true"
+            android:paddingHorizontal="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/blackFade"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/createLayer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="50dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:paddingStart="40dp"
+            android:background="@drawable/border_rad"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateTint="?attr/ashBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/ashBlack"
+                android:textSize="16sp"
+                android:layout_marginStart="5dp"
+                android:text="@string/creating_page"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/blackFade"
+        android:paddingHorizontal="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="?attr/blackFade">
+
+    </LinearLayout>
+
+</RelativeLayout>

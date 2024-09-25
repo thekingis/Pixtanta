@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".SmartPassAct"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:id="@+id/txt"
+                android:orientation="horizontal"
+                android:gravity="center"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="45dp"
+                    android:minWidth="45dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/icon"
+                    android:contentDescription="@string/todo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/smart_login"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="?attr/icon_pri_red"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:padding="5dp"
+                android:background="@drawable/border">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:cardCornerRadius="30dp"
+                    android:layout_margin="5dp"
+                    app:cardElevation="0dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/photo"
+                        android:maxWidth="60dp"
+                        android:maxHeight="60dp"
+                        android:minHeight="60dp"
+                        android:minWidth="60dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:drawablePadding="10dp"
+                        android:textSize="18sp"
+                        android:textColor="?attr/black"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:clickable="true"
+                        android:id="@+id/name"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="?attr/ash"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:clickable="true"
+                        android:id="@+id/userName"
+                        android:focusable="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="50dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:singleLine="true"
+                    android:lines="1"
+					android:background="@drawable/border_bottom"
+                    android:id="@+id/pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="@string/password"
+                    android:padding="5dp"
+					android:textColorHint="?attr/blash"
+                    android:textColor="?attr/icon_pri_red"
+                    android:inputType="textPassword" />
+                <TextView
+                    android:id="@+id/errLog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:textColor="?attr/icon_pri_red"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/colorPrimaryRed"
+					android:textStyle="bold"
+                    android:text="@string/login"
+                    android:id="@+id/loginBtn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forgot_password"
+                    android:textColor="?attr/icon_pri_red"
+                    android:textSize="16sp"
+                    android:id="@+id/forgotPass"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/blackFade"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/logoutLayer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="50dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:paddingStart="40dp"
+            android:background="@drawable/border_rad"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateTint="?attr/ashBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/ashBlack"
+                android:textSize="16sp"
+                android:id="@+id/textView"
+                android:layout_marginStart="5dp"
+                android:text="@string/logging_in"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

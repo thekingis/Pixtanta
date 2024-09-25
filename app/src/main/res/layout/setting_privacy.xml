@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_top"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/black"
+            android:textSize="20sp"
+            android:text="@string/restrict_your_profile_to_only_your_friends_followers_and_those_you_follow"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profYes"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/yes"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profNo"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/no"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_top"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/black"
+            android:textSize="20sp"
+            android:text="@string/request_for_your_permission_to_accept_a_follower"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reqYes"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/yes"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reqNo"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/no"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_top"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/black"
+            android:textSize="20sp"
+            android:text="@string/permit_everyone_to_see_your_friend_list"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/frndYes"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/yes"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/frndNo"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/no"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_top"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/black"
+            android:textSize="20sp"
+            android:text="@string/permit_everyone_to_see_those_who_follow_you"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fllwYes"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/yes"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fllwNo"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/no"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_top"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/black"
+            android:textSize="20sp"
+            android:text="@string/permit_everyone_to_see_those_whom_you_follow"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fllwerYes"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/yes"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fllwerNo"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/no"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_top"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/black"
+            android:textSize="20sp"
+            android:text="@string/do_you_want_search_engine_outside_pixtanta_to_link_to_your_profile"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/srchYes"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/yes"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/srchNo"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/no"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:layout_margin="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resTxt"
+            android:textSize="17sp"
+            android:gravity="center"
+			android:textColor="?attr/black"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryRed"
+            android:id="@+id/savePrvBtn"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/save"/>
+    </LinearLayout>
+
+</LinearLayout>

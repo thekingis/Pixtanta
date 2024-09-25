@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_rad"
+        android:padding="30dp"
+        android:layout_marginHorizontal="20dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_a_theme"
+            android:textColor="?attr/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lightTheme"
+            android:textColor="?attr/ashBlack"
+            android:textSize="17sp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/light_theme"
+            android:drawablePadding="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/darkTheme"
+            android:textColor="?attr/ashBlack"
+            android:textSize="17sp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/dark_theme"
+            android:drawablePadding="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:duplicateParentState="true"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:duplicateParentState="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancel"
+                android:backgroundTint="@color/ash"
+                android:textColor="@color/black"
+				android:textStyle="bold"
+                android:layout_marginHorizontal="10dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/cancel"
+                 />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/save"
+                android:backgroundTint="@color/colorPrimaryRed"
+                android:textColor="@color/white"
+				android:textStyle="bold"
+                android:duplicateParentState="true"
+                android:layout_marginHorizontal="10dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/ok"
+                 />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

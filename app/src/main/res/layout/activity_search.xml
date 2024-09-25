@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    android:id="@+id/mainHomeView"
+    tools:context=".SearchActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:imeOptions="actionSearch"
+		android:textColorHint="?attr/blash"
+		android:background="@drawable/border_bottom"
+        android:singleLine="true"
+        android:lines="1"
+        android:layout_margin="10dp"
+        android:hint="@string/search"
+        android:padding="5dp"
+        android:textColor="?attr/icon_pri_red"
+        android:inputType="text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loadingLayer"
+        android:orientation="vertical">
+
+        <include layout="@layout/loading_layer"/>
+        <include layout="@layout/loading_layer"/>
+        <include layout="@layout/loading_layer"/>
+        <include layout="@layout/loading_layer"/>
+        <include layout="@layout/loading_layer"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout"
+        android:visibility="invisible"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabLayout"
+            app:tabGravity="fill"
+            app:tabInlineLabel="true"
+            android:layout_marginTop="10dp"
+            android:textAlignment="textStart"
+            app:tabSelectedTextColor="?attr/icon_opt_color"
+            app:tabTextColor="?attr/black"
+            app:tabIconTint="?attr/blash"
+            app:tabPaddingStart="10dp"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:duplicateParentState="true"
+            android:layout_weight="1"
+            android:id="@+id/viewPager">
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:elevation="10dp"
+        android:visibility="invisible"
+        android:id="@+id/blackFade"
+        android:paddingHorizontal="8dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:background="?attr/blackFade">
+
+    </LinearLayout>
+
+</RelativeLayout>

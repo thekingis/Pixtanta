@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    tools:context=".VideosFragment">
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridView"
+        android:numColumns="auto_fit"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="3dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="-17dp"
+        android:stretchMode="spacingWidthUniform">
+
+    </GridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_marginTop="50dp"
+            android:textColor="?attr/black"
+            android:textSize="17sp"
+            android:text="@string/no_video_uploaded" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".PageActivity"
+    android:focusable="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport = "true"
+        android:id="@+id/nest"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/viewHolder">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/boc">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/ash"
+                    android:orientation="vertical"
+                    android:id="@+id/covPhtLayout">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/covPht"
+                        android:contentDescription="@string/todo"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cardCornerRadius="15dp"
+                    android:visibility="invisible"
+                    android:id="@+id/changeCp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_gravity="end"
+                    app:cardElevation="4dp">
+
+                    <ImageButton
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_margin="7dp"
+                        android:id="@+id/changeCpBtn"
+                        android:background="@drawable/ic_camera_red"
+                        android:contentDescription="@string/todo"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/prf_pic"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-120dp"
+                    android:gravity="center"
+                    android:id="@+id/prfPhtLayout">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="195dp"
+                        android:layout_height="195dp"
+                        app:cardCornerRadius="97dp"
+                        android:layout_gravity="center"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/photoHolder">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="195dp"
+                                android:layout_height="195dp"
+                                android:id="@+id/prfPht"/>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-110dp"
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyle"
+                        android:indeterminateTint="?attr/ashBlack"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cardCornerRadius="15dp"
+                    android:visibility="invisible"
+                    android:id="@+id/changeDp"
+                    android:layout_marginTop="-45dp"
+                    android:layout_marginEnd="-65dp"
+                    android:layout_gravity="center"
+                    app:cardElevation="4dp">
+
+                    <ImageButton
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_margin="7dp"
+                        android:id="@+id/changeDpBtn"
+                        android:background="@drawable/ic_camera_red"
+                        android:contentDescription="@string/todo"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:id="@+id/saverL">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:duplicateParentState="true"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/discardChange"
+                    android:backgroundTint="@color/ash"
+                    android:textColor="@color/black"
+					android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/discard"
+                     />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saveChange"
+                    android:backgroundTint="@color/colorPrimaryRed"
+                    android:textColor="@color/white"
+					android:textStyle="bold"
+                    android:duplicateParentState="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/save"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                android:id="@+id/holder">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/textName"
+                    android:textColor="?attr/black"
+                    android:textStyle="bold"
+                    android:drawablePadding="10dp"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/userName"
+                    android:textColor="?attr/ashBlack"
+                    android:textSize="18sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/foldLayout"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:padding="8dp"
+                        android:background="@drawable/new_border"
+                        android:drawablePadding="7dp"
+                        app:drawableLeftCompat="@drawable/ic_followers"
+                        android:textColor="?attr/blash"
+                        android:textSize="18sp"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        android:text="@string/follow"
+                        android:id="@+id/follow"
+                        android:tag="false"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:padding="8dp"
+                        android:background="@drawable/new_border"
+                        android:drawablePadding="7dp"
+                        app:drawableLeftCompat="@drawable/ic_edit"
+                        android:textColor="?attr/blash"
+                        android:visibility="gone"
+                        android:textSize="18sp"
+                        android:layout_margin="5dp"
+                        android:text="@string/edit_info"
+                        android:id="@+id/editPage"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/boxer"/>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tabLayout"
+                    app:tabGravity="fill"
+                    app:tabInlineLabel="true"
+                    android:textAlignment="textStart"
+                    app:tabSelectedTextColor="?attr/icon_opt_color"
+                    app:tabTextColor="?attr/black"
+                    app:tabIconTint="?attr/blash"
+                    app:tabPaddingStart="10dp"/>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/viewPager">
+                </androidx.viewpager.widget.ViewPager>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/blackFade"
+        android:paddingHorizontal="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/blackFade">
+
+    </LinearLayout>
+
+    <com.pixtanta.android.Views.MaxHeightScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mxHeight="250dp"
+        android:id="@+id/comScrllView"
+        android:padding="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:visibility="gone"
+        android:background="@drawable/border_rad_asher">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/comMentionLayer">
+
+        </LinearLayout>
+
+    </com.pixtanta.android.Views.MaxHeightScrollView>
+
+</RelativeLayout>

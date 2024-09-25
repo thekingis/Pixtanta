@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/msg_list_hl"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:focusable="true">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/msgerPht"
+        android:maxWidth="50dp"
+        android:maxHeight="50dp"
+        android:minHeight="50dp"
+        android:minWidth="50dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:id="@+id/firstLayer"
+        android:layout_marginEnd="80dp"
+        android:paddingStart="7dp"
+        android:orientation="vertical"
+        tools:ignore="RtlSymmetry">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/msgerName"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="?attr/black"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.5dp"
+            android:id="@+id/msgTxt"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="?attr/black"
+            android:textSize="13sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:id="@+id/secondLayer"
+        android:layout_marginStart="-80dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/msgDate"
+            android:textColor="?attr/asher"
+            android:textAlignment="viewEnd"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+        <ImageButton
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="3.5dp"
+            android:id="@+id/msgSeen"
+            android:visibility="gone"
+            android:layout_gravity="end"
+            android:contentDescription="@string/todo" />
+
+    </LinearLayout>
+
+</LinearLayout>

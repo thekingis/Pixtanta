@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    tools:context=".ImageSelectorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="?attr/colorPrimaryRed"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/done"
+            android:clickable="true"
+            android:id="@+id/done"
+            android:layout_marginEnd="20dp"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridView"
+        android:numColumns="auto_fit"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:gravity="center"
+        android:layout_marginStart="-15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="60dp"
+        android:stretchMode="spacingWidthUniform">
+
+    </GridView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:id="@+id/discardLayout"
+        android:gravity="center"
+        android:background="?attr/blackFade">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/border_rad"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/black"
+                android:textSize="15sp"
+                android:text="@string/do_you_want_to_discard_your_selections"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cancelDiscard"
+                    android:backgroundTint="@color/ash"
+                    android:textColor="@color/black"
+					android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/no"
+                     />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agreeDiscard"
+                    android:backgroundTint="@color/colorPrimaryRed"
+                    android:textColor="@color/white"
+					android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/yes"
+                     />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

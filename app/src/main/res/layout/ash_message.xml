@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:duplicateParentState="true"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:clipChildren="false"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:duplicateParentState="true"
+        android:gravity="start"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:orientation="horizontal"
+            android:layout_marginVertical="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:duplicateParentState="true"
+                android:layout_gravity="top"
+                android:id="@+id/profPic"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:duplicateParentState="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ash_bubble"
+                android:layout_marginEnd="80dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="8dp"
+                android:id="@+id/messageHolder"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/border_racker"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    android:duplicateParentState="true"
+                    android:id="@+id/messageRef">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/icon_pri_red"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:duplicateParentState="true"
+                        android:id="@+id/msgRefName"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/msgRefDisplay"
+                        android:textColor="?attr/black"
+                        android:singleLine="false"
+                        android:lines="2"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:duplicateParentState="true"
+                    android:padding="3dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/border_rad"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    android:layout_below="@id/messageRef"
+                    android:id="@+id/linkDisplay">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/linkImg"
+                        android:layout_marginEnd="5dp"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/todo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linkTitle"
+                            android:singleLine="true"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linkDesc"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+							android:textColor="?attr/black"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linkHost"
+                            android:singleLine="true"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/black"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:duplicateParentState="true"
+                    android:layout_below="@id/linkDisplay"
+                    android:id="@+id/audioView">
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_play_circle_red"
+                        android:clickable="true"
+                        android:id="@+id/audioPlayPause"
+                        android:tag="false"
+                        android:duplicateParentState="true"
+                        android:layout_alignParentStart="true"
+                        android:contentDescription="@string/todo"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/audioTimer"
+                        android:padding="0dp"
+                        android:duplicateParentState="true"
+                        android:layout_marginTop="3dp"
+                        android:textColor="?attr/icon_pri_red"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="14sp"
+                        android:text="@string/_00_00_00"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/white"
+                        android:id="@+id/audioLength"
+                        android:duplicateParentState="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginEnd="53dp"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:background="?attr/green"
+                        android:id="@+id/audioProgress"
+                        android:duplicateParentState="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginEnd="53dp"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical" />
+
+                </RelativeLayout>
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filesGrid"
+                    android:numColumns="auto_fit"
+                    android:duplicateParentState="true"
+                    android:columnWidth="100dp"
+                    android:horizontalSpacing="5dp"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone"
+                    android:layout_below="@id/linkDisplay"
+                    android:gravity="start"
+                    android:layout_marginStart="-15dp"
+                    android:stretchMode="spacingWidthUniform">
+                </GridView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:id="@+id/message"
+                    android:layout_below="@id/filesGrid"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:textColor="?attr/icon_pri_red"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:id="@+id/date"
+            android:textSize="11sp"
+            android:layout_marginStart="42dp"
+            android:textColor="?attr/black"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+</RelativeLayout>

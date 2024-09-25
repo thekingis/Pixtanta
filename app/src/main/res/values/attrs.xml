@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MaxHeightScrollView">
+        <attr name="mxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomImageView">
+        <attr name="adjustViewBounds" format="boolean" />
+        <attr name="scaleType">
+            <enum name="matrix" value="0" />
+            <enum name="fitXY" value="1" />
+            <enum name="fitStart" value="2" />
+            <enum name="fitCenter" value="3" />
+            <enum name="fitEnd" value="4" />
+            <enum name="center" value="5" />
+            <enum name="centerCrop" value="6" />
+            <enum name="centerInside" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomView">
+        <attr name="excluded" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="searchAll" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BackgroundChangingView">
+        <attr name="enterFadeDuration" format="integer"/>
+        <attr name="exitFadeDuration" format="integer"/>
+        <attr name="borderRadius" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="SlidingGradientView">
+        <attr name="animationDuration" format="integer"/>
+        <attr name="gradientStartColor" format="color"/>
+        <attr name="gradientEndColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SliderView">
+        <attr name="animeDuration" format="integer"/>
+        <attr name="sliderIcon" format="reference"/>
+        <attr name="iconWidth" format="dimension"/>
+        <attr name="iconHeight" format="dimension"/>
+    </declare-styleable>
+
+    <attr name="colorPrimaryRed" format="color" />
+    <attr name="black" format="color" />
+    <attr name="white" format="color" />
+    <attr name="pink" format="color" />
+    <attr name="ash" format="color" />
+    <attr name="red" format="color" />
+    <attr name="reder" format="color" />
+    <attr name="ashBlack" format="color" />
+    <attr name="asher" format="color" />
+    <attr name="darkAsh" format="color" />
+    <attr name="blash" format="color" />
+    <attr name="blackFade" format="color" />
+    <attr name="whiteFade" format="color" />
+    <attr name="transparent" format="color" />
+    <attr name="green" format="color" />
+    <attr name="yellow" format="color" />
+    <attr name="yellowLight" format="color" />
+    <attr name="selected_filter" format="color" />
+    <attr name="normal_filter" format="color" />
+    <attr name="lightAsh" format="color" />
+    <attr name="purple_700" format="color" />
+    <attr name="purple_200" format="color" />
+    <attr name="teal_200" format="color" />
+    <attr name="icon_pri_red" format="color" />
+    <attr name="clomp" format="color" />
+    <attr name="icon_opt_color" format="color" />
+    <attr name="greenTwo" format="color" />
+    <attr name="onlineColor" format="color" />
+    <attr name="offlineColor" format="color" />
+    <attr name="gradientColor" format="color" />
+    <attr name="twitch" format="color" />
+    <attr name="highLightWhite" format="color" />
+
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/you_have_no_active_page"
+        android:gravity="center"
+        android:layout_margin="20dp"
+		android:textColor="?attr/black"
+        android:textSize="17sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/colorPrimaryRed"
+        android:text="@string/create_new_page"
+        android:id="@+id/createPage"
+        android:textAllCaps="false"
+		android:textStyle="bold"
+        android:textColor="@color/white" />
+
+</LinearLayout>

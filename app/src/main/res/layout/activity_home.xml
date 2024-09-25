@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".HomeAct"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topBar"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:shape="ring"
+            app:cardCornerRadius="25dp"
+            android:id="@+id/viewPrf"
+            android:layout_marginStart="5dp"
+            app:cardElevation="0dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/profPic"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+			android:textColorHint="?attr/blash"
+            android:layout_height="30dp"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+			android:background="@drawable/border_bottom"
+            android:lines="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="50dp"
+            android:hint="@string/search"
+            android:padding="5dp"
+            android:textColor="?attr/icon_pri_red"
+            android:inputType="text"/>
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_marginStart="-50dp"
+            android:gravity="center"
+            android:id="@+id/menu"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/opt"
+                android:contentDescription="@string/todo"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:id="@+id/postView"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/loadingLayer"
+            android:orientation="vertical">
+
+            <include layout="@layout/loading_layer"/>
+            <include layout="@layout/loading_layer"/>
+            <include layout="@layout/loading_layer"/>
+            <include layout="@layout/loading_layer"/>
+            <include layout="@layout/loading_layer"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="gone"
+            android:id="@+id/postScrllVw"
+            tools:ignore="UselessParent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="50dp"
+                android:id="@+id/layout"
+                android:focusable="true">
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <include layout="@layout/header"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/plex"
+        android:elevation="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/writePost"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/white"
+        android:id="@+id/menuLayout"
+        android:elevation="9dp"
+        android:visibility="invisible"
+        android:layout_marginTop="55dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="50dp"
+                android:id="@+id/menuDis"
+                android:focusable="true">
+
+                <ProgressBar
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="200dp"
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:indeterminateTint="?attr/ashBlack"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/white"
+        android:id="@+id/noteLayout"
+        android:elevation="9dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp"
+                android:id="@+id/progressBarNt"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateTint="?attr/ashBlack"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tabLayout"
+                app:tabGravity="fill"
+                android:elevation="1dp"
+                app:tabInlineLabel="true"
+                android:textAlignment="textStart"
+                android:visibility="invisible"
+                android:duplicateParentState="true"
+                app:tabSelectedTextColor="?attr/icon_opt_color"
+                app:tabTextColor="?attr/black"
+                app:tabIconTint="?attr/blash"
+                app:tabPaddingStart="10dp"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tabLayout"
+                android:elevation="1dp"
+                android:visibility="invisible"
+                android:duplicateParentState="true"
+                android:id="@+id/noteViewPager">
+            </androidx.viewpager.widget.ViewPager>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/white"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:elevation="9dp"
+        android:id="@+id/writeLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+					android:textColorHint="?attr/blash"
+                    android:inputType="text|textMultiLine"
+                    android:hint="@string/make_a_post"
+                    android:background="@drawable/border"
+                    android:textColor="?attr/black"
+                    android:padding="10dp"
+                    android:gravity="top|start"
+                    android:id="@+id/postTxt"
+                    android:autofillHints="" />
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="55dp"
+                    android:id="@+id/gridView"
+                    android:numColumns="auto_fit"
+                    android:columnWidth="100dp"
+                    android:horizontalSpacing="10dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:verticalSpacing="10dp"
+                    android:gravity="center"
+                    android:stretchMode="columnWidth"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="-50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="10dp"
+                        app:drawableLeftCompat="@drawable/ic_camera_ash"
+                        android:text="@string/add_photos_videos"
+                        android:textColor="?attr/ashBlack"
+                        android:textSize="17sp"
+                        android:clickable="true"
+                        android:paddingStart="10dp"
+                        android:id="@+id/ups"
+                        tools:ignore="RtlSymmetry"
+                        android:focusable="true" />
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/border_red"
+						android:textStyle="bold"
+                        android:layout_marginStart="-100dp"
+                        android:text="@string/post"
+                        android:id="@+id/postBtn"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.pixtanta.android.Views.MaxHeightScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mxHeight="250dp"
+                android:id="@+id/scrllView"
+                android:layout_gravity="top"
+                android:layout_marginTop="155dp"
+                android:padding="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:visibility="gone"
+                android:background="@drawable/border_rad_asher">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/mentionLayer">
+
+                </LinearLayout>
+
+            </com.pixtanta.android.Views.MaxHeightScrollView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/white"
+        android:layout_marginTop="55dp"
+        android:id="@+id/searchLayout"
+        android:elevation="9dp"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchDis"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:focusable="true">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="?attr/white"
+            android:layout_marginTop="-30dp"
+            android:textColor="?attr/icon_pri_red"
+            android:textSize="19sp"
+            android:text="@string/see_all_results"
+            android:visibility="gone"
+            android:id="@+id/searchRslt"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/blackFade"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:elevation="10dp"
+        android:id="@+id/logoutLayer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="50dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:paddingStart="40dp"
+            android:background="@drawable/border_rad"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateTint="?attr/ashBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/ashBlack"
+                android:textSize="16sp"
+                android:layout_marginStart="5dp"
+                android:text="@string/logging_out"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:elevation="10dp"
+        android:visibility="invisible"
+        android:id="@+id/blackFade"
+        android:paddingHorizontal="8dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:background="?attr/blackFade">
+
+    </LinearLayout>
+
+    <com.pixtanta.android.Views.MaxHeightScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mxHeight="250dp"
+        android:id="@+id/comScrllView"
+        android:padding="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:visibility="gone"
+        android:background="@drawable/border_rad_asher">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/comMentionLayer">
+
+        </LinearLayout>
+
+    </com.pixtanta.android.Views.MaxHeightScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:background="?attr/white"
+    tools:context=".PageEditActivity"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/scrllView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/page_name"
+                android:textColor="?attr/icon_pri_red"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/pageName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:singleLine="true"
+                android:lines="1"
+                android:layout_marginEnd="10dp"
+				android:background="@drawable/border_bottom"
+                android:textSize="16sp"
+				android:textColorHint="?attr/blash"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textColor="?attr/icon_pri_red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/page_category"
+                android:textColor="?attr/icon_pri_red"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/pageType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp" />
+
+            <Spinner
+                android:id="@+id/pageCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/email"
+                android:textColor="?attr/icon_pri_red"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:singleLine="true"
+                android:lines="1"
+                android:layout_marginEnd="10dp"
+				android:background="@drawable/border_bottom"
+                android:textSize="16sp"
+				android:textColorHint="?attr/blash"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:textColor="?attr/icon_pri_red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/phone_number"
+                android:textColor="?attr/icon_pri_red"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:singleLine="true"
+                android:lines="1"
+                android:layout_marginEnd="10dp"
+                android:textSize="16sp"
+				android:background="@drawable/border_bottom"
+                android:padding="5dp"
+				android:textColorHint="?attr/blash"
+                android:inputType="phone"
+                android:textColor="?attr/icon_pri_red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/website"
+                android:textColor="?attr/icon_pri_red"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/website"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:singleLine="true"
+				android:textColorHint="?attr/blash"
+				android:background="@drawable/border_bottom"
+                android:lines="1"
+                android:layout_marginEnd="10dp"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="?attr/icon_pri_red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/description"
+                android:textColor="?attr/icon_pri_red"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text|textMultiLine"
+				android:textColorHint="?attr/blash"
+                android:background="@drawable/border"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                android:textColor="?attr/icon_pri_red"
+                android:textSize="16sp"
+                android:gravity="top|start"
+                android:id="@+id/description"/>
+
+            <TextView
+                android:id="@+id/errLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:textColor="?attr/icon_pri_red"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/colorPrimaryRed"
+				android:textStyle="bold"
+                android:text="@string/save"
+                android:id="@+id/saveBtn"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/layout">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            style="?android:attr/progressBarStyle"
+            android:indeterminateTint="?attr/ashBlack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/blackFade"
+        android:paddingHorizontal="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/blackFade">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/blackFade"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/savingLayer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="50dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:paddingStart="30dp"
+            android:background="@drawable/border_rad"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateTint="?attr/ashBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/ashBlack"
+                android:textSize="16sp"
+                android:layout_marginStart="5dp"
+                android:text="@string/saving"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

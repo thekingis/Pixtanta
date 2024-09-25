@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    tools:context=".TermsAct">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/header"
+        android:gravity="center_vertical"
+        android:duplicateParentState="true"
+        android:visibility="gone"
+        android:background="@color/colorPrimaryRed"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:duplicateParentState="true"
+            android:textStyle="bold"
+            android:text="@string/terms_and_policies"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:background="?attr/white"
+        android:visibility="gone"
+        android:overScrollMode="never"
+        android:id="@+id/webView"/>
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="?attr/ashBlack"/>
+
+</RelativeLayout>

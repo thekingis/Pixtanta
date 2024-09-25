@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginVertical="2dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/border_rad_ash"
+        android:paddingVertical="3dp"
+        android:paddingHorizontal="5dp"
+        tools:ignore="UselessParent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/profPic"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/ic_verified_user"
+            android:id="@+id/vUser"
+            android:contentDescription="@string/todo"
+            android:visibility="invisible"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="-18dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentView"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:minLines="1"
+            android:textColor="?attr/black"/>
+
+    </LinearLayout>
+
+</LinearLayout>

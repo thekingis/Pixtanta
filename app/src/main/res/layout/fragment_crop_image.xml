@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".CropImageFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:textSize="20sp"
+        android:text="@string/crop_image"
+        android:drawablePadding="20dp"
+        android:textColor="?attr/icon_pri_red"
+        app:drawableLeftCompat="@drawable/ic_crop"
+        android:clickable="true"
+        android:background="@drawable/border"
+        android:id="@+id/cropImage"
+        android:focusable="true" />
+
+</LinearLayout>

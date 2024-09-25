@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:clickable="false"
+    android:focusable="false"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:duplicateParentState="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@drawable/border_top_rad"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+			android:textColor="?attr/black"
+            android:text="@string/report_a_problem"
+            android:layout_margin="15dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+			android:textColor="?attr/black"
+            android:text="@string/what_went_wrong"
+            android:layout_margin="0px"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/reportText"
+            android:gravity="top|start"
+            android:inputType="text|textMultiLine"
+			android:textColorHint="?attr/blash"
+			android:textColor="?attr/black"
+            android:background="@drawable/border"
+            android:layout_margin="12dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/colorPrimaryRed"
+			android:textStyle="bold"
+            android:text="@string/send_report"
+            android:id="@+id/sendBtn"
+            android:textSize="18sp"
+            android:layout_margin="14dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toogle"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/shake_phone_to_report_a_problem"
+            android:tag="true"
+			android:textColor="?attr/black"
+            app:drawableLeftCompat="@drawable/ic_check_true"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

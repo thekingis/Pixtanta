@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".CommentsActivity"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/header"
+        android:visibility="invisible"
+        android:duplicateParentState="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="?attr/black"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:text="@string/comments"
+            android:layout_marginStart="10dp"
+            tools:ignore="RelativeOverlap" />
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:id="@+id/menu"
+            android:layout_alignParentEnd="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:duplicateParentState="true"
+                android:src="@drawable/opt"
+                android:contentDescription="@string/todo"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:background="@drawable/border_top_ash"
+        android:id="@+id/scrllView"
+        android:layout_marginBottom="50dp"
+        android:duplicateParentState="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/commentsLayout"
+            android:focusable="true">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp"
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateTint="?attr/ashBlack"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:orientation="horizontal"
+        android:background="@drawable/round_ash"
+        android:duplicateParentState="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/commentBx"
+        android:layout_marginHorizontal="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            android:duplicateParentState="true"
+            android:background="?attr/ash"
+            app:cardElevation="0dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:duplicateParentState="true"
+                android:layout_height="40dp"
+                android:id="@+id/myComPht"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="text|textMultiLine"
+            android:hint="@string/comment"
+            android:background="#00000000"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="50dp"
+			android:textColorHint="?attr/blash"
+            android:duplicateParentState="true"
+            android:textSize="15sp"
+            android:textColor="?attr/black"
+            android:id="@+id/commentBox"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:duplicateParentState="true"
+            android:layout_height="35dp"
+            android:layout_marginStart="-50dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/submitCommentBtn"
+            android:background="@drawable/ic_send"
+            android:contentDescription="@string/todo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/deleteLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:background="?attr/blackFade">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="10dp"
+            android:gravity="center"
+            android:background="@drawable/border_rad"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                android:textColor="?attr/black"
+                android:text="@string/are_you_sure_you_want_to_delete_this_comment"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cancelDelete"
+                    android:backgroundTint="@color/ash"
+                    android:textColor="@color/black"
+					android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/cancel"
+                    android:textSize="15sp"
+                     />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/confirmDelete"
+                    android:backgroundTint="@color/colorPrimaryRed"
+                    android:textColor="@color/white"
+					android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/delete"
+                    android:textSize="15sp"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/blackFade"
+        android:paddingHorizontal="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/blackFade">
+
+    </LinearLayout>
+
+    <com.pixtanta.android.Views.MaxHeightScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mxHeight="250dp"
+        android:id="@+id/comScrllView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:padding="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:visibility="gone"
+        android:background="@drawable/border_rad_asher">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/mentionLayer">
+
+        </LinearLayout>
+
+    </com.pixtanta.android.Views.MaxHeightScrollView>
+
+</RelativeLayout>

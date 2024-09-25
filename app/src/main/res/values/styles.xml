@@ -1,0 +1,97 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryRed</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryRed</item>
+        <item name="colorAccent">@color/colorPrimaryRed</item>
+        <!--item name="android:windowBackground">@color/colorPrimaryRed</item-->
+    </style>
+    <!--style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/-->
+
+    <style name="LightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryRed</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryRed</item>
+        <item name="colorAccent">@color/colorPrimaryRed</item>
+        <item name="colorPrimaryRed">#B00000</item>
+        <item name="black">#000000</item>
+        <item name="white">#FFFFFF</item>
+        <item name="pink">#FF0099</item>
+        <item name="ash">#E8E8E8</item>
+        <item name="red">#DD0000</item>
+        <item name="reder">#990000</item>
+        <item name="ashBlack">#B8B8B8</item>
+        <item name="asher">#C0C0C0</item>
+        <item name="darkAsh">#E0E0E0</item>
+        <item name="blash">#585858</item>
+        <item name="blackFade">#99000000</item>
+        <item name="whiteFade">#99FFFFFF</item>
+        <item name="transparent">#00FFFFFF</item>
+        <item name="green">#009900</item>
+        <item name="greenTwo">#009900</item>
+        <item name="yellow">#FFFF00</item>
+        <item name="yellowLight">#FFFF99</item>
+        <item name="selected_filter">#221f20</item>
+        <item name="normal_filter">#8a8889</item>
+        <item name="lightAsh">#F8F8F8</item>
+        <item name="purple_700">#000000</item>
+        <item name="purple_200">#000000</item>
+        <item name="teal_200">#000000</item>
+        <item name="icon_pri_red">#B00000</item>
+        <item name="icon_opt_color">#B00000</item>
+        <item name="onlineColor">#009900</item>
+        <item name="offlineColor">#990000</item>
+        <item name="gradientColor">#E0E0E0</item>
+        <item name="twitch">#990000</item>
+        <item name="clomp">#B00000</item>
+        <item name="highLightWhite">#F9F9F9</item>
+        <item name="android:statusBarColor">@color/colorPrimaryRed</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#FF0000</item>
+        <item name="colorPrimaryRed">#B00000</item>
+        <item name="black">#FFFFFF</item>
+        <item name="white">#000000</item>
+        <item name="pink">#FF0099</item>
+        <item name="ash">#585858</item>
+        <item name="red">#DD0000</item>
+        <item name="reder">#990000</item>
+        <item name="ashBlack">#B8B8B8</item>
+        <item name="asher">#C0C0C0</item>
+        <item name="darkAsh">#E0E0E0</item>
+        <item name="blash">#E8E8E8</item>
+        <item name="whiteFade">#99000000</item>
+        <item name="blackFade">#99FFFFFF</item>
+        <item name="transparent">#00FFFFFF</item>
+        <item name="green">#009900</item>
+        <item name="greenTwo">#FF0000</item>
+        <item name="yellow">#FFFF00</item>
+        <item name="yellowLight">#FFFF99</item>
+        <item name="selected_filter">#221f20</item>
+        <item name="normal_filter">#8a8889</item>
+        <item name="lightAsh">#585858</item>
+        <item name="purple_700">#000000</item>
+        <item name="purple_200">#000000</item>
+        <item name="teal_200">#000000</item>
+        <item name="icon_pri_red">#F5F5F5</item>
+        <item name="icon_opt_color">#FF0000</item>
+        <item name="onlineColor">#00FF00</item>
+        <item name="offlineColor">#FF0000</item>
+        <item name="gradientColor">#A8A8A8</item>
+        <item name="twitch">#FFFFFF</item>
+        <item name="clomp">#B8B8B8</item>
+        <item name="highLightWhite">#454545</item>
+        <item name="android:statusBarColor">@color/colorPrimaryRed</item>
+        <item name="android:navigationBarColor">#000000</item>
+    </style>
+
+    <style name="spinnerTheme">
+        <item name="android:textColor">?attr/twitch</item>
+    </style>
+
+</resources>

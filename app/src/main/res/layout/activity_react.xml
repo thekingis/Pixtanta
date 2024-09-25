@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ReactActivity"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/header"
+        android:gravity="center_vertical"
+        android:duplicateParentState="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="?attr/black"
+            android:duplicateParentState="true"
+            android:id="@+id/reactNum"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:background="@drawable/border_top_ash"
+        android:id="@+id/scrllView"
+        android:duplicateParentState="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/reactLayout"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/loadingLayer"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <include layout="@layout/users_loader"/>
+                <include layout="@layout/users_loader"/>
+                <include layout="@layout/users_loader"/>
+                <include layout="@layout/users_loader"/>
+                <include layout="@layout/users_loader"/>
+                <include layout="@layout/users_loader"/>
+                <include layout="@layout/users_loader"/>
+                <include layout="@layout/users_loader"/>
+                <include layout="@layout/users_loader"/>
+                <include layout="@layout/users_loader"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

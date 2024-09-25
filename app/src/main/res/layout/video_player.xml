@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/videoPlayer"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:contentDescription="@string/todo"
+        android:id="@+id/videoThumbnail"/>
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:indeterminateTint="?attr/ashBlack"/>
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/videoPlayPause"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:contentDescription="@string/todo"
+        android:background="@drawable/ic_pause"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:id="@+id/controlsLayout"
+        android:visibility="invisible"
+        android:paddingHorizontal="10dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/videoTime"
+            android:textColor="@color/white"
+            android:text="@string/_00_00_00"
+            android:layout_marginEnd="5dp"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/videoProgress"
+            android:layout_marginEnd="60dp"
+            android:tickMark="?attr/blash"
+            android:progressDrawable="@drawable/progress"
+            tools:targetApi="n" />
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/videoDuration"
+            android:textColor="@color/white"
+            android:text="@string/_00_00_00"
+            android:layout_marginStart="-55dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

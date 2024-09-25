@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:background="?attr/white"
+    tools:context=".SignupAct"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icon"
+                    android:contentDescription="@string/todo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_new_account"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    android:textColor="?attr/icon_pri_red"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:lines="1"
+					android:background="@drawable/border_bottom"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="10dp"
+					android:textColorHint="?attr/blash"
+                    android:hint="@string/first_name"
+                    android:padding="5dp"
+                    android:textColor="?attr/icon_pri_red"
+                     />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/lName"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:lines="1"
+					android:background="@drawable/border_bottom"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="@string/last_name"
+					android:textColorHint="?attr/blash"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:textColor="?attr/icon_pri_red"
+                     />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:lines="1"
+					android:background="@drawable/border_bottom"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="10dp"
+					android:textColorHint="?attr/blash"
+                    android:hint="@string/email"
+                    android:padding="5dp"
+                    android:textColor="?attr/icon_pri_red"
+                     />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:lines="1"
+					android:background="@drawable/border_bottom"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="16sp"
+					android:textColorHint="?attr/blash"
+                    android:hint="@string/username"
+                    android:padding="5dp"
+                    android:textColor="?attr/icon_pri_red"
+                     />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:singleLine="true"
+                    android:lines="1"
+					android:background="@drawable/border_bottom"
+                    android:id="@+id/pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+					android:textColorHint="?attr/blash"
+                    android:hint="@string/password"
+                    android:padding="5dp"
+                    android:textColor="?attr/icon_pri_red"
+                    android:textSize="16sp"
+                    android:inputType="textPassword"
+                     />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/cPass"
+                    android:textSize="16sp"
+                    android:singleLine="true"
+					android:textColorHint="?attr/blash"
+                    android:lines="1"
+					android:background="@drawable/border_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="@string/confirm_password"
+                    android:padding="5dp"
+                    android:textColor="?attr/icon_pri_red"
+                    android:inputType="textPassword"
+                     />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/birthday"
+                    android:textColor="?attr/icon_pri_red"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAlignment="center"
+                        android:theme="@style/spinnerTheme"
+                        android:popupBackground="@drawable/border_rad_line"
+                        android:background="@drawable/border_rad_line"
+                        android:paddingHorizontal="10dp" />
+
+                    <Spinner
+                        android:id="@+id/day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAlignment="center"
+                        android:theme="@style/spinnerTheme"
+                        android:popupBackground="@drawable/border_rad_line"
+                        android:background="@drawable/border_rad_line"
+                        android:paddingHorizontal="10dp" />
+
+                    <Spinner
+                        android:id="@+id/year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAlignment="center"
+                        android:theme="@style/spinnerTheme"
+                        android:popupBackground="@drawable/border_rad_line"
+                        android:background="@drawable/border_rad_line"
+                        android:paddingHorizontal="10dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/gender"
+                    android:textColor="?attr/icon_pri_red"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:buttonTint="?attr/icon_pri_red"
+                        android:text="@string/female"
+                        android:textSize="16sp"
+                        android:textColor="?attr/black" />
+
+                    <RadioButton
+                        android:id="@+id/male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:buttonTint="?attr/icon_pri_red"
+                        android:text="@string/male"
+                        android:textSize="16sp"
+                        android:textColor="?attr/black" />
+
+                    <RadioButton
+                        android:id="@+id/other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:buttonTint="?attr/icon_pri_red"
+                        android:text="@string/other"
+                        android:textSize="16sp"
+                        android:textColor="?attr/black" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/errLog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:textColor="?attr/icon_pri_red"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/colorPrimaryRed"
+					android:textStyle="bold"
+                    android:text="@string/sign_up"
+                    android:id="@+id/regBtn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/blackFade"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/logoutLayer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="50dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:paddingStart="30dp"
+            android:background="@drawable/border_rad"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateTint="?attr/ashBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/ashBlack"
+                android:textSize="16sp"
+                android:layout_marginStart="5dp"
+                android:text="@string/creating_account"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

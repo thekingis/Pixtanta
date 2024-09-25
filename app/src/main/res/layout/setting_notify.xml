@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_top"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/black"
+            android:textSize="20sp"
+            android:text="@string/enable_notification_sound"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sndYes"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/yes"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sndNo"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/no"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_top"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/black"
+            android:textSize="20sp"
+            android:text="@string/enable_push_notification"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pshYes"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/yes"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pshNo"
+            android:textColor="?attr/ashBlack"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_check_false"
+            android:text="@string/no"
+            android:drawablePadding="5dp"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:layout_margin="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resTxt"
+            android:textSize="17sp"
+            android:gravity="center"
+			android:textColor="?attr/black"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryRed"
+            android:id="@+id/saveNtfBtn"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/save"/>
+    </LinearLayout>
+
+</LinearLayout>

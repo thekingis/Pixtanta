@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/white"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".EditPostActivity"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+			android:textColorHint="?attr/blash"
+			android:textColor="?attr/black"
+            android:layout_margin="5dp"
+            android:inputType="text|textMultiLine"
+            android:hint="@string/make_a_post"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:gravity="top|start"
+            android:id="@+id/postTxt"/>
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp"
+            android:id="@+id/gridView"
+            android:numColumns="auto_fit"
+            android:columnWidth="100dp"
+            android:horizontalSpacing="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:verticalSpacing="10dp"
+            android:gravity="center"
+            android:stretchMode="columnWidth"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="-50dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"
+                app:drawableLeftCompat="@drawable/ic_camera_ash"
+                android:text="@string/add_photos_videos"
+                android:textColor="?attr/ashBlack"
+                android:textSize="20sp"
+                android:clickable="true"
+                android:paddingStart="10dp"
+                android:id="@+id/ups"
+                android:focusable="true"
+                tools:ignore="RtlSymmetry" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:backgroundTint="@color/colorPrimaryRed"
+                android:layout_marginStart="-100dp"
+                android:text="@string/save"
+                android:id="@+id/postBtn"
+                android:textAllCaps="false"
+				android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.pixtanta.android.Views.MaxHeightScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mxHeight="250dp"
+        android:id="@+id/scrllView"
+        android:layout_gravity="top"
+        android:layout_marginTop="155dp"
+        android:padding="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:visibility="gone"
+        android:background="@drawable/border_rad_asher">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/mentionLayer">
+
+        </LinearLayout>
+
+    </com.pixtanta.android.Views.MaxHeightScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:background="?attr/white"
+        android:focusableInTouchMode="true"
+        android:id="@+id/loader"
+        android:focusable="true">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            style="?android:attr/progressBarStyle"
+            android:indeterminateTint="?attr/ashBlack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/blackFade"
+        android:paddingHorizontal="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        android:focusableInTouchMode="true"
+        android:background="?attr/blackFade">
+
+    </LinearLayout>
+
+</RelativeLayout>

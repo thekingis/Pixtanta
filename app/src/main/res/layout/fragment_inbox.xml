@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".InboxFragment"
+    android:focusable="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/white"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:id="@+id/postScrllVw">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrllView"
+            android:duplicateParentState="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="10dp"
+                android:id="@+id/msgDis"
+                android:focusable="true">
+
+                <ProgressBar
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="200dp"
+                    android:visibility="invisible"
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:indeterminateTint="?attr/ashBlack"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/white"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:visibility="gone"
+        android:id="@+id/favScrllVw">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrllViewFav"
+            android:duplicateParentState="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="10dp"
+                android:id="@+id/favDis"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="50dp"
+                    android:gravity="center"
+                    android:id="@+id/favText"
+                    android:textColor="?attr/black"
+                    android:textSize="17sp"
+                    android:text="@string/no_chat_in_the_favourites"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/white"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:visibility="gone"
+        android:id="@+id/arcScrllVw">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrllViewArc"
+            android:duplicateParentState="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="10dp"
+                android:id="@+id/arcDis"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="50dp"
+                    android:gravity="center"
+                    android:id="@+id/archText"
+                    android:textColor="?attr/black"
+                    android:textSize="17sp"
+                    android:text="@string/no_chat_in_the_archive"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

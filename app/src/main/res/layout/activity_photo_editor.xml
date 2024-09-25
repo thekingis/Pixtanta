@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainHomeView"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:background="?attr/white"
+    tools:context=".PhotoEditorAct"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/toolBar"
+        android:background="?attr/colorPrimaryRed"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/discardEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:drawableLeftCompat="@drawable/ic_back_white"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/discard"
+            android:textColor="@color/white"
+            android:layout_alignParentStart="true"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_centerInParent="true">
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/undo"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/border_do"
+                android:src="@drawable/ic_undo"
+                android:contentDescription="@string/todo" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/redo"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/border_do"
+                android:scaleX="-1"
+                android:src="@drawable/ic_undo_dis"
+                android:contentDescription="@string/todo" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:paddingHorizontal="10dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/saveEdit"
+            android:text="@string/save_edit"
+            android:layout_gravity="end"
+            android:textSize="18sp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/content_main"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:id="@+id/discardLayout"
+        android:gravity="center"
+        android:background="?attr/blackFade">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/border_rad"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/black"
+                android:textSize="17sp"
+                android:text="@string/do_you_want_to_discard_photo_editor"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cancelDiscard"
+                    android:backgroundTint="@color/ash"
+                    android:textColor="@color/black"
+					android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/no"
+                     />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agreeDiscard"
+                    android:backgroundTint="@color/colorPrimaryRed"
+                    android:textColor="@color/white"
+					android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/yes"
+                     />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:background="?attr/white"
+        android:focusableInTouchMode="true"
+        android:id="@+id/loader"
+        android:focusable="true">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            style="?android:attr/progressBarStyle"
+            android:indeterminateTint="?attr/ashBlack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/blackFade"
+        android:paddingHorizontal="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        android:focusableInTouchMode="true"
+        android:background="?attr/blackFade">
+
+    </LinearLayout>
+
+</RelativeLayout>

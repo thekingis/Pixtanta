@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tool:context=".PhotoEditorAct"
+    android:background="?attr/white"
+    tool:showIn="@layout/activity_photo_editor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewPager"
+        android:gravity="center">
+
+        <com.pixtanta.android.Views.CustomImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scaleType="fitCenter"
+            app:adjustViewBounds="true"
+            android:id="@+id/photoEditorView"/>
+
+    </LinearLayout>
+
+    <com.pixtanta.android.Utils.NonSwipeableViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_above="@+id/tabs"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:background="@color/ash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabs"
+        android:layout_alignParentBottom="true"
+        app:tabGravity="fill"
+        app:tabMode="fixed"/>
+
+</RelativeLayout>

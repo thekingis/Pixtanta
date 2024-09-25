@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/ash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePageAct">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/kill"
+        android:background="?attr/colorPrimaryRed">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/select_your_page_category"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/kill"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

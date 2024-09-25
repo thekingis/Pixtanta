@@ -1,0 +1,65 @@
+package com.pixtanta.android;
+
+public class Constants {
+    public static String[] pageTypes = new String[]{"Local Business", "Company and Organization", "Brands and Products", "Personality", "Entertainment", "Community"};
+    public static String[] pageForLocal = new String[]{"Advertising/Marketing", "Agriculture", "Airport", "Apparel & Clothing", "Arts & Entertainment", "Automotive", "Aircraft & Boat", "Aviation", "Bar", "Beauty", "Cosmetic & Personal Care", "Bookstore", "Business Service", "Casino & Gaming", "College & University", "Design & Fashion", "Doctor", "Environmental Service", "Event Planner", "Fashion", "Finance", "Grocery Store", "Home Improvement", "Home Improvement Service", "Hospital", "Hotel", "Hotel & Lodging", "In-Home Service", "Landmark & Historical Place", "Lawyer", "Legal", "Library", "Local Business", "Local Service", "Marine", "Medical & Health", "Middle School", "Movie Theater", "Outdoor & Sporting Goods Company", "Performance & Event Venue", "Pet Service", "Public & Government Services", "Real Estate", "Religious Organization", "Restaurant", "School", "Shopping & Retail", "Sports & Recreation", "Stadium", "Arena & Sports Venue", "Tour Agency", "Train Station", "Transit Stop"};
+    public static String[] pageForCom = new String[]{"Aerospace Company", "Agriculture Company", "Biotechnology Company", "Cargo & Freight Company", "Cause", "Chemical Company", "College & University", "Community Organization", "Community Services", "Company", "Computer Company", "Consulting Agency", "Education", "Elementary School", "Energy Company", "Finance Company", "Food & Beverage Company", "Government Organization", "Health/Beauty", "High School", "Industrial Company", "Insurance Company", "Internet Company", "Labor Union", "Legal Company", "Media/News Company", "Medical Company", "Middle School", "Mining Company", "Motor Vehicle Company", "Non-Governmental Organization (NGO)", "Nonprofit Organization", "Organization", "Political Organization", "Political Party", "Preschool", "Religious Organization", "Retail Company", "School", "Science, Technology & Engineering", "Telecommunication Company", "Tobacco Company", "Travel Company"};
+    public static String[] pageForBrnd = new String[]{"App Page", "Appliances", "Baby Goods/Kids Goods", "Bags/Luggage", "Board Game", "Brand", "Building Materials", "Camera/Photo", "Cars", "Clothing (Brand)", "Commercial Equipment", "Computers (Brand)", "Electronics", "Food & Beverage Company", "Furniture", "Games/Toys", "Health/Beauty", "Home Decor", "Household Supplies", "Jewelry/Watches", "Kitchen/Cooking", "Office Supplies", "Patio/Garden", "Pet Supplies", "Pharmaceuticals", "Phone/Tablet", "Product/Service", "Software", "Tools/Equipment", "Video Game", "Vitamins/Supplements", "Website", "Wine/Spirits"};
+    public static String[] pageForArt = new String[]{"Actor", "Artist", "Athlete", "Author", "Band", "Blogger", "Chef", "Coach", "Comedian", "Dancer", "Entrepreneur", "Fashion Model", "Fictional Character", "Film Director", "Fitness Model", "Government Official", "Journalist", "Motivational Speaker", "Movie Character", "Musician", "News Personality", "Pet", "Photographer", "Political Candidate", "Politician", "Producer", "Public Figure", "Scientist", "Teacher", "Video Creator", "Writer"};
+    public static String[] pageForEnt = new String[]{"Album", "Amateur Sports Team", "Book", "Book Series", "Bookstore", "Concert Tour", "Festival", "Fictional Character", "Library", "Literary Arts", "Magazine", "Movie", "Movie Character", "Movie Theater", "Movie/Television Studio", "Music Award", "Music Chart", "Music Video", "Performance & Event Venue", "Performance Art", "Performing Arts", "Podcast", "Radio Station", "Record Label", "School Sports Team", "Song", "Sports League", "Sports Team", "Stadium, Arena & Sports Venue", "Theatrical Play", "Theatrical Productions", "TV Channel", "TV Network", "TV Show", "TV/Movie Award"};
+    public static String[] allowedExt = {".mp4", ".mkv", ".mov", ".3gp", ".webm", ".flv", ".mpeg4", ".avi", ".wmv", ".jpg", ".jpeg", ".gif", ".png", ".bmp"};
+    public static String[] allowedExtVid = {".mp4", ".mkv", ".mov", ".3gp", ".webm", ".flv", ".mpeg4", ".avi", ".wmv"};
+    public static String[] allowedExtImg = {".jpg", ".jpeg", ".gif", ".png", ".bmp"};
+    public static int pageCounter = 0;
+    private static final String rootUrl = "http://192.168.137.1/app/";
+    public static final String www = "http://192.168.137.1";
+    /*
+    private static final String rootUrl = "http://localhost:8080/app/";
+    //public static final String www = "http://localhost:8080";
+    //private static final String rootUrl = "http://localhost:8080/app/";
+    //public static final String www = "http://localhost:8080";
+    */
+    public static final String socketUrl = "http://192.168.137.1:8080";
+    public static final String regUrl = rootUrl + "signUp.php";
+    public static final String loginUrl = rootUrl + "login.php";
+    public static final String newsUrl = rootUrl + "newsFeeds.php";
+    public static final String profileUrl = rootUrl + "profile.php";
+    public static final String pageUrl = rootUrl + "page.php";
+    public static final String menuUrl = rootUrl + "menu.php";
+    public static final String msgUrl = rootUrl + "msg.php";
+    public static final String msgerUrl = rootUrl + "msger.php";
+    public static final String tagsUrl = rootUrl + "tags.php";
+    public static final String tacUrl = rootUrl + "tac.php";
+    public static final String settingsUrl = rootUrl + "settings.php";
+    public static final String settingUrl = rootUrl + "setting.php";
+    public static final String actionsUrl = rootUrl + "actions.php";
+    public static final String submitPostUrl = rootUrl + "submitPost.php";
+    public static final String postDisplayUrl = rootUrl + "postDisplay.php";
+    public static final String getPostUrl = rootUrl + "getPost.php";
+    public static final String profileDisplayUrl = rootUrl + "profileDisplay.php";
+    public static final String pageDisplayUrl = rootUrl + "pageDisplay.php";
+    public static final String aboutPageUrl = rootUrl + "aboutPage.php";
+    public static final String commentUrl = rootUrl + "comments.php";
+    public static final String repliesUrl = rootUrl + "replies.php";
+    public static final String notificationsUrl = rootUrl + "notifications.php";
+    public static final String postContentUrl = rootUrl + "postContent.php";
+    public static final String editPostUrl = rootUrl + "editPost.php";
+    public static final String createPageUrl = rootUrl + "createPage.php";
+    public static final String loadPagesUrl = rootUrl + "loadPages.php";
+    public static final String changePhotoUrl = rootUrl + "changePhoto.php";
+    public static final String fileDisplayUrl = rootUrl + "fileDisplay.php";
+    public static final String uploadMsgFilesUrl = rootUrl + "uploadMsgFiles.php";
+    public static final String mediaLinksUrl = rootUrl + "mediaLinks.php";
+    public static final String getLinkContentUrl = rootUrl + "getLinkContent.php";
+    public static final String reactstUrl = rootUrl + "reacts.php";
+    public static final String savedPoststUrl = rootUrl + "savedPosts.php";
+    public static final String hiddenPoststUrl = rootUrl + "hiddenPosts.php";
+    public static final String deletedPoststUrl = rootUrl + "deletedPosts.php";
+    public static final String searchUrl = rootUrl + "search.php";
+    public static final String listerUrl = rootUrl + "lister.php";
+    public static final String forwardListUrl = rootUrl + "forwardList.php";
+    public static final String pageInfoUrl = rootUrl + "pageInfo.php";
+    public static final String activityLogUrl = rootUrl + "activityLog.php";
+    public static final String forgotPassUrl = rootUrl + "forgotPass.php";
+    public static final String postLinkUrl = www + "/postDisplay/";
+}

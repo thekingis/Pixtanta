@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- uses-feature android:name="android.hardware.Camera"/ -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/icon_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m" >
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".TagsActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".PageEditActivity" />
+        <activity android:name=".FFFAct" />
+        <activity android:name=".TermsAct" />
+        <activity android:name=".PostDisplayAct" />
+        <activity android:name=".ReportAct" />
+        <activity android:name=".DeletedpostsAct" />
+        <activity android:name=".HiddenpostsAct" />
+        <activity android:name=".SavedpostsAct" />
+        <activity android:name=".ReactActivity" />
+        <activity android:name=".SmartLoginAct" />
+        <activity android:name=".HomeAct" />
+        <activity android:name=".LoginAct" />
+        <activity android:name=".InboxAct" />
+        <activity android:name=".ActsActivity" />
+        <activity android:name=".ManagePageAct" />
+        <activity android:name=".PageActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CreatePageAct" />
+        <activity android:name=".EditPostActivity" />
+        <activity android:name=".VideoEditorAct" />
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".PhotoOpenerAct" />
+        <activity android:name=".PickEditImage" />
+        <activity android:name=".PhotoEditorAct" />
+        <activity android:name=".PhotoGridAct" />
+        <activity android:name=".SettingsAct" />
+        <activity android:name=".ProfileAct" />
+        <activity android:name=".SignupAct" />
+        <activity android:name=".MessageAct" />
+        <activity android:name=".SmartPassAct" />
+        <activity android:name=".SettingAct" />
+        <activity android:name=".ImageSelectorActivity" />
+        <activity android:name=".SetupPageActivity" />
+        <activity android:name=".EditReplyActivity" />
+        <activity android:name=".RepliesActivity" />
+        <activity android:name=".EditCommentActivity" />
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>
